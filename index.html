@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lens & Light — Photography Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">L<span>&amp;</span>L</a>
+    <ul class="nav-links">
+      <li><a href="#intro">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#intro" class="mobile-link">About</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag reveal">Portfolio — 2025</p>
+      <h1 class="hero-title reveal delay-1">
+        Light is the<br /><em>language</em><br />I speak.
+      </h1>
+      <p class="hero-sub reveal delay-2">Capturing moments. Crafting stories.</p>
+      <a href="#gallery" class="hero-cta reveal delay-3">
+        <span>Explore Gallery</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-scroll reveal delay-3">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── INTRO ── -->
+  <section class="intro" id="intro">
+    <div class="intro-inner">
+      <div class="intro-label">About Me</div>
+      <h2 class="intro-heading">Every frame<br /><em>tells a truth.</em></h2>
+      <p class="intro-body">
+        I'm a visual storyteller based across landscapes and cities. With an eye for
+        the fleeting — the golden sliver of late-afternoon light, the unguarded
+        expression — I translate the world into images that breathe.
+      </p>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Years shooting</span></div>
+        <div class="stat"><span class="stat-num">340</span><span class="stat-label">Projects completed</span></div>
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">Countries explored</span></div>
+      </div>
+    </div>
+    <div class="intro-img-wrap">
+      <div class="intro-img-placeholder">
+        <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="500" fill="url(#grad1)"/>
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="400" y2="500" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1a1a2e"/>
+              <stop offset="100%" stop-color="#0d0d16"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="180" r="60" fill="none" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+          <circle cx="200" cy="180" r="40" fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
+          <line x1="200" y1="120" x2="200" y2="240" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+          <line x1="140" y1="180" x2="260" y2="180" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+          <rect x="100" y="320" width="200" height="2" fill="rgba(212,175,55,0.2)"/>
+          <text x="200" y="370" fill="rgba(212,175,55,0.4)" font-family="Georgia" font-size="12" text-anchor="middle" letter-spacing="3">PHOTOGRAPHER</text>
+        </svg>
+      </div>
+      <div class="intro-badge">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212,175,55,0.5)" stroke-width="1"/></svg>
+        <span>Available for projects</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header">
+      <div class="gallery-label">Selected Work</div>
+      <h2 class="gallery-heading">The Gallery</h2>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="landscape">Landscapes</button>
+      <button class="filter-btn" data-filter="portrait">Portraits</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Landscape 1 -->
+      <div class="gallery-item landscape" data-index="0">
+        <div class="gallery-img-wrap">
+          <img src="landscape photo1.jpg" alt="Landscape 1" class="gallery-img" loading="lazy" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none'" />
+          <div class="gallery-placeholder">
+            <div class="ph-icon">🏔</div>
+            <span>Mountain Vista</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Landscape</span>
+          <span class="caption-title">Mountain Vista</span>
+        </div>
+      </div>
+
+      <!-- Portrait 1 -->
+      <div class="gallery-item portrait" data-index="1">
+        <div class="gallery-img-wrap">
+          <img src="portrait photo1.jpg" alt="Portrait 1" class="gallery-img" loading="lazy" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none'" />
+          <div class="gallery-placeholder">
+            <div class="ph-icon">🎭</div>
+            <span>Soul Study I</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Portrait</span>
+          <span class="caption-title">Soul Study I</span>
+        </div>
+      </div>
+
+      <!-- Landscape 2 — spans 2 cols -->
+      <div class="gallery-item landscape wide" data-index="2">
+        <div class="gallery-img-wrap">
+          <img src="landscape photo2.jpg" alt="Landscape 2" class="gallery-img" loading="lazy" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none'" />
+          <div class="gallery-placeholder">
+            <div class="ph-icon">🌊</div>
+            <span>Coastal Dusk</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Landscape</span>
+          <span class="caption-title">Coastal Dusk</span>
+        </div>
+      </div>
+
+      <!-- Portrait 2 -->
+      <div class="gallery-item portrait" data-index="3">
+        <div class="gallery-img-wrap">
+          <img src="portrait photo2.jpg" alt="Portrait 2" class="gallery-img" loading="lazy" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none'" />
+          <div class="gallery-placeholder">
+            <div class="ph-icon">✨</div>
+            <span>Quiet Light</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Portrait</span>
+          <span class="caption-title">Quiet Light</span>
+        </div>
+      </div>
+
+      <!-- Extra landscape filler -->
+      <div class="gallery-item landscape" data-index="4">
+        <div class="gallery-img-wrap">
+          <div class="gallery-placeholder show">
+            <div class="ph-icon">🌄</div>
+            <span>Golden Hour</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Landscape</span>
+          <span class="caption-title">Golden Hour</span>
+        </div>
+      </div>
+
+      <!-- Extra portrait filler -->
+      <div class="gallery-item portrait" data-index="5">
+        <div class="gallery-img-wrap">
+          <div class="gallery-placeholder show">
+            <div class="ph-icon">🎨</div>
+            <span>Chiaroscuro</span>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <span class="caption-cat">Portrait</span>
+          <span class="caption-title">Chiaroscuro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="Gallery photo" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="contact-label">Get In Touch</div>
+        <h2 class="contact-heading">Let's create<br /><em>something beautiful.</em></h2>
+        <p class="contact-body">Whether it's a portrait session, a landscape expedition, or a full editorial project — I'd love to hear about your vision.</p>
+        <div class="contact-info">
+          <a href="mailto:hello@lensandlight.com" class="contact-link">hello@lensandlight.com</a>
+          <a href="tel:+10000000000" class="contact-link">+1 (000) 000-0000</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="name" name="name" autocomplete="name" placeholder=" " required />
+            <label for="name">Your Name</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" autocomplete="email" placeholder=" " required />
+            <label for="email">Email Address</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Your Message</label>
+            <div class="form-line"></div>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </span>
+          </button>
+          <p class="form-status" id="formStatus" role="alert"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Lens <em>&amp;</em> Light</span>
+      <span class="footer-copy">© 2025 — All rights reserved</span>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Behance">BE</a>
+        <a href="#" aria-label="Flickr">FL</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
